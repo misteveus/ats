@@ -2,6 +2,20 @@
 
 
 ## Remote
+- 3.3v power and ground header
+    - No OVP
+    - No OCP
+    - No polarity protection
+    - Modules have their own decoupling caps
+    - Modules have decoupling capacitors
+- SPI header for LoRa module debug
+- UART header for GPS module debug
+- ICSP header for programming the PIC18
+- LoRa module and SMD antenna
+- GPS module and SMD antenna
+- PIC18 controller
+    - Controls SPI and UART
+
 
 ![remote schematic](remote/schematics/ats-remote/ats-remote.svg)  
 
