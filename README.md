@@ -3,7 +3,9 @@
 
 ## Remote
 
-![remote schematic](remote/schematics/ats-remote/ats-remote.svg)
+![remote schematic](remote/schematics/ats-remote/ats-remote.svg)  
+
+![remote pcb](remote/schematics/ats-remote/ats-remote.png)  
 
 ## References
 Microcontroller PIC18F06Q40 [datasheet](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F06-16Q40-Data-Sheet-40002216D.pdf)  
