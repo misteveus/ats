@@ -16,7 +16,6 @@
 - PIC18 controller
     - Controls SPI and UART
 
-
 ![remote schematic](remote/schematics/ats-remote/ats-remote.svg)  
 
 ![remote pcb](remote/schematics/ats-remote/ats-remote.png)  

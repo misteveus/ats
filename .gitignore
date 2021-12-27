@@ -4,15 +4,5 @@ remote/schematics/ats-remote/fp-info-cache
 remote/schematics/ats-remote/fp-lib-table
 remote/schematics/ats-remote/sym-lib-table
 remote/schematics/ats-remote/_autosave-ats-remote.kicad_pcb
-remote/schematics/ats-remote/gerber/ats-remote-B_Cu.gbr
-remote/schematics/ats-remote/gerber/ats-remote-B_Mask.gbr
-remote/schematics/ats-remote/gerber/ats-remote-Edge_Cuts.gbr
-remote/schematics/ats-remote/gerber/ats-remote-F_Cu.gbr
-remote/schematics/ats-remote/gerber/ats-remote-F_Mask.gbr
-remote/schematics/ats-remote/gerber/ats-remote-F_Paste.gbr
-remote/schematics/ats-remote/gerber/ats-remote-F_SilkS.gbr
-remote/schematics/ats-remote/gerber/ats-remote-job.gbrjob
-remote/schematics/ats-remote/gerber/ats-remote-NPTH-drl_map.gbr
-remote/schematics/ats-remote/gerber/ats-remote-NPTH.drl
-remote/schematics/ats-remote/gerber/ats-remote-PTH-drl_map.gbr
-remote/schematics/ats-remote/gerber/ats-remote-PTH.drl
+remote/schematics/ats-remote/gerber/**
+
