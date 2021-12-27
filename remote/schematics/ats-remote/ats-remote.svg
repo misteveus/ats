@@ -89,6 +89,12 @@ stroke-linecap:round; stroke-linejoin:round;">
 <g style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
+<path style="fill:#840000; fill-opacity:0.0; 
+stroke:#840000; stroke-width:120; stroke-opacity:1; 
+stroke-linecap:round; stroke-linejoin:round;fill:none"
+d="M 96100,53700
+94900,53700
+" /> 
 </g>
 <g style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:80; stroke-opacity:1; 
@@ -691,7 +697,7 @@ stroke:#840000; stroke-width:0; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;">
 </g>
 <g style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:100; stroke-opacity:1; 
+stroke:#840000; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 <path style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:100; stroke-opacity:1; 
@@ -708,7 +714,7 @@ d="M 101500,42500
 " /> 
 </g>
 <g style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:60; stroke-opacity:1; 
+stroke:#840000; stroke-width:80; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 <path d="M101000 44500
 L101000 45500
@@ -1010,7 +1016,7 @@ stroke-linecap:round; stroke-linejoin:round;">
 <rect x="48800" y="8700" width="1400" height="600" rx="0" />
 </g>
 <g style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:60; stroke-opacity:1; 
+stroke:#840000; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 <path d="M50200 9000
 L50500 9000
@@ -1122,7 +1128,7 @@ d="M 33900,55800
 " /> 
 </g>
 <g style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:60; stroke-opacity:1; 
+stroke:#840000; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 <path d="M34500 55800
 L34500 55000
@@ -1518,6 +1524,108 @@ stroke-linecap:round; stroke-linejoin:round;">
 <g style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
+<text x="85520" y="16380"
+textLength="1440" font-size="660" lengthAdjust="spacingAndGlyphs"
+text-anchor="middle" opacity="0">AE1</text>
+<path d="M84930 16210
+L85170 16210
+" />
+<path d="M84880 16350
+L85050 15850
+L85220 16350
+" />
+<path d="M85380 16090
+L85550 16090
+" />
+<path d="M85620 16350
+L85380 16350
+L85380 15850
+L85620 15850
+" />
+<path d="M86100 16350
+L85810 16350
+" />
+<path d="M85960 16350
+L85960 15850
+L85910 15920
+L85860 15970
+L85810 15990
+" />
+<text x="86430" y="17310"
+textLength="3270" font-size="660" lengthAdjust="spacingAndGlyphs"
+text-anchor="middle" opacity="0">GPS_ANT</text>
+<path d="M85210 16810
+L85160 16780
+L85090 16780
+L85020 16810
+L84970 16850
+L84950 16900
+L84930 17000
+L84930 17070
+L84950 17160
+L84970 17210
+L85020 17260
+L85090 17280
+L85140 17280
+L85210 17260
+L85230 17230
+L85230 17070
+L85140 17070
+" />
+<path d="M85450 17280
+L85450 16780
+L85640 16780
+L85690 16810
+L85710 16830
+L85730 16880
+L85730 16950
+L85710 17000
+L85690 17020
+L85640 17040
+L85450 17040
+" />
+<path d="M85930 17260
+L86000 17280
+L86120 17280
+L86160 17260
+L86190 17230
+L86210 17190
+L86210 17140
+L86190 17090
+L86160 17070
+L86120 17040
+L86020 17020
+L85970 17000
+L85950 16970
+L85930 16920
+L85930 16880
+L85950 16830
+L85970 16810
+L86020 16780
+L86140 16780
+L86210 16810
+" />
+<path d="M86310 17330
+L86690 17330
+" />
+<path d="M86780 17140
+L87020 17140
+" />
+<path d="M86730 17280
+L86900 16780
+L87070 17280
+" />
+<path d="M87230 17280
+L87230 16780
+L87520 17280
+L87520 16780
+" />
+<path d="M87690 16780
+L87970 16780
+" />
+<path d="M87830 17280
+L87830 16780
+" />
 </g>
 <g style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:100; stroke-opacity:1; 
@@ -1529,8 +1637,8 @@ d="M 40200,18900
 40200,18100
 " /> 
 </g>
-<g style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:60; stroke-opacity:1; 
+<g style="fill:#008484; fill-opacity:0.0; 
+stroke:#008484; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 <path style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:60; stroke-opacity:1; 
@@ -1540,7 +1648,7 @@ d="M 40900,18500
 " /> 
 </g>
 <g style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:100; stroke-opacity:1; 
+stroke:#840000; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 <path style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:100; stroke-opacity:1; 
@@ -1551,7 +1659,7 @@ d="M 40800,18900
 Z" /> 
 </g>
 <g style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:60; stroke-opacity:1; 
+stroke:#840000; stroke-width:100; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 <path style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:60; stroke-opacity:1; 
@@ -4420,6 +4528,12 @@ stroke:#008484; stroke-width:0; stroke-opacity:1;
 stroke-linecap:round; stroke-linejoin:round;">
 <g >
 </g>
+</g>
+<g style="fill:#008484; fill-opacity:0.0; 
+stroke:#008484; stroke-width:0; stroke-opacity:1; 
+stroke-linecap:round; stroke-linejoin:round;">
+<g >
+</g>
 <g style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
@@ -5829,6 +5943,12 @@ L47020 60550
 L47330 60550
 " />
 </g>
+</g>
+<g style="fill:#008484; fill-opacity:0.0; 
+stroke:#008484; stroke-width:0; stroke-opacity:1; 
+stroke-linecap:round; stroke-linejoin:round;">
+<g >
+</g>
 <g style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:60; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
@@ -5981,6 +6101,12 @@ L52660 61720
 L52970 61720
 " />
 </g>
+</g>
+<g style="fill:#008484; fill-opacity:0.0; 
+stroke:#008484; stroke-width:0; stroke-opacity:1; 
+stroke-linecap:round; stroke-linejoin:round;">
+<g >
+</g>
 <g style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:60; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
@@ -6071,6 +6197,12 @@ L52780 60290
 L52730 60340
 L52680 60360
 " />
+</g>
+</g>
+<g style="fill:#008484; fill-opacity:0.0; 
+stroke:#008484; stroke-width:0; stroke-opacity:1; 
+stroke-linecap:round; stroke-linejoin:round;">
+<g >
 </g>
 <g style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:60; stroke-opacity:1; 
@@ -6325,8 +6457,14 @@ stroke-linecap:round; stroke-linejoin:round;">
 stroke:#840000; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 </g>
+</g>
+<g style="fill:#008484; fill-opacity:0.0; 
+stroke:#008484; stroke-width:0; stroke-opacity:1; 
+stroke-linecap:round; stroke-linejoin:round;">
+<g >
+</g>
 <g style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:100; stroke-opacity:1; 
+stroke:#840000; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 <path style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:100; stroke-opacity:1; 
@@ -6345,11 +6483,21 @@ d="M 13500,45600
 13500,46300
 " /> 
 </g>
+</g>
+<g style="fill:#008484; fill-opacity:0.0; 
+stroke:#008484; stroke-width:0; stroke-opacity:1; 
+stroke-linecap:round; stroke-linejoin:round;">
+<g >
+</g>
 <g style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:100; stroke-opacity:1; 
+stroke:#840000; stroke-width:0; stroke-opacity:1; 
+stroke-linecap:round; stroke-linejoin:round;">
+</g>
+<g style="fill:#840000; fill-opacity:0.0; 
+stroke:#840000; stroke-width:130; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 <path style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:100; stroke-opacity:1; 
+stroke:#840000; stroke-width:130; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;fill:none"
 d="M 13900,45700
 13500,46300
@@ -14161,8 +14309,8 @@ L43890 59720
 L43770 59720
 " />
 </g>
-<g style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:100; stroke-opacity:1; 
+<g style="fill:#008400; fill-opacity:0.0; 
+stroke:#008400; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 <path style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:100; stroke-opacity:1; 
@@ -14247,8 +14395,8 @@ L41890 13720
 L41770 13720
 " />
 </g>
-<g style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:100; stroke-opacity:1; 
+<g style="fill:#008400; fill-opacity:1.0; 
+stroke:#008400; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 <path style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:100; stroke-opacity:1; 
@@ -14372,8 +14520,8 @@ L90500 54250
 L90550 54220
 " />
 </g>
-<g style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:100; stroke-opacity:1; 
+<g style="fill:#008400; fill-opacity:1.0; 
+stroke:#008400; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 <path style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:100; stroke-opacity:1; 
@@ -14449,8 +14597,8 @@ L41890 9220
 L41770 9220
 " />
 </g>
-<g style="fill:#840000; fill-opacity:0.0; 
-stroke:#840000; stroke-width:100; stroke-opacity:1; 
+<g style="fill:#008400; fill-opacity:1.0; 
+stroke:#008400; stroke-width:0; stroke-opacity:1; 
 stroke-linecap:round; stroke-linejoin:round;">
 <path style="fill:#840000; fill-opacity:0.0; 
 stroke:#840000; stroke-width:100; stroke-opacity:1; 

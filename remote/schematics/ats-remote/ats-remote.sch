@@ -657,6 +657,64 @@ F 3 "~" H 4950 1350 50  0001 C CNN
 	1    4950 1350
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	5150 900  5150 1650
+Wire Wire Line
+	4850 1350 4350 1350
+Wire Wire Line
+	4850 900  4350 900 
+$Comp
+L power:GND #PWR0120
+U 1 1 61F19544
+P 3850 2050
+F 0 "#PWR0120" H 3850 1800 50  0001 C CNN
+F 1 "GND" H 3855 1875 50  0000 C CNN
+F 2 "" H 3850 2050 50  0001 C CNN
+F 3 "" H 3850 2050 50  0001 C CNN
+	1    3850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_Small D3
+U 1 1 61F1DC27
+P 4250 1850
+F 0 "D3" H 4250 2089 50  0000 C CNN
+F 1 "LED_PPS" H 4250 1996 50  0000 C CNN
+F 2 "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4250 1850 50  0001 C CNN
+F 3 "~" V 4250 1850 50  0001 C CNN
+	1    4250 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 1850 3850 2050
+$Comp
+L Device:C_Small C3
+U 1 1 61F2C911
+P 4350 1450
+F 0 "C3" H 4442 1497 50  0000 L CNN
+F 1 "100p" H 4442 1404 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4350 1450 50  0001 C CNN
+F 3 "~" H 4350 1450 50  0001 C CNN
+	1    4350 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 61F2ED54
+P 4350 1000
+F 0 "C2" H 4442 1047 50  0000 L CNN
+F 1 "100p" H 4442 954 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4350 1000 50  0001 C CNN
+F 3 "~" H 4350 1000 50  0001 C CNN
+	1    4350 1000
+	1    0    0    -1  
+$EndComp
+Connection ~ 4350 900 
+Wire Wire Line
+	4350 900  4250 900 
+Connection ~ 4350 1350
+Wire Wire Line
+	4350 1350 4250 1350
 $Comp
 L Device:R_Small R6
 U 1 1 61F0A817
