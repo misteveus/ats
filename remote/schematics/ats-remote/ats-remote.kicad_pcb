@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 21)
+    (drawings 25)
     (tracks 398)
     (zones 0)
     (modules 37)
@@ -17,9 +17,9 @@
   )
 
   (layers
-    (0 F.Cu signal hide)
-    (1 GND.Cu power hide)
-    (2 3v3.Cu power hide)
+    (0 F.Cu signal)
+    (1 GND.Cu power)
+    (2 3v3.Cu power)
     (31 B.Cu signal)
     (32 B.Adhes user)
     (33 F.Adhes user)
@@ -1652,6 +1652,18 @@
     (pad 2 smd rect (at -6.425 4.6 270) (size 1.15 4.2) (layers B.Cu B.Paste B.Mask))
   )
 
+  (gr_text "GPS ANT" (at 136.5 39.5 90) (layer F.SilkS) (tstamp 61CAAE03)
+    (effects (font (size 0.5 0.5) (thickness 0.1)))
+  )
+  (gr_text "LORA ANT\n" (at 115.2 48.8) (layer B.SilkS) (tstamp 61CAA9B3)
+    (effects (font (size 0.5 0.5) (thickness 0.1)) (justify mirror))
+  )
+  (gr_text YIC71009EBGG (at 136.2 53.6) (layer F.SilkS) (tstamp 61CAA8E7)
+    (effects (font (size 0.5 0.5) (thickness 0.1)))
+  )
+  (gr_text PIC18F06 (at 123.2 53.5) (layer F.SilkS) (tstamp 61CAA8E2)
+    (effects (font (size 0.5 0.5) (thickness 0.1)))
+  )
   (gr_text TX (at 144.3 60.1) (layer F.SilkS) (tstamp 61CAA55E)
     (effects (font (size 0.5 0.5) (thickness 0.1)))
   )
