@@ -1,10 +1,12 @@
 #include "devcfg.h"
+
 #include <xc.h>
 
+#include <spi.h>
+#include <uart.h>
+#include <lora.h>
+
 void init(void);
-void uart_init(void);
-void spi_init(void);
-void lora_init(void);
 
 int main(void)
 {
@@ -18,22 +20,5 @@ int main(void)
 
 void init(void)
 {
-    uart_init();
-    spi_init();
     lora_init();
-}
-
-void uart_init(void)
-{
-    
-}
-
-void spi_init(void)
-{
-    
-}
-
-void lora_init(void)
-{
-    
 }

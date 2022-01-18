@@ -6,3 +6,8 @@ remote/schematics/ats-remote/sym-lib-table
 remote/schematics/ats-remote/_autosave-ats-remote.kicad_pcb
 remote/schematics/ats-remote/gerber/**
 
+/remote/firmware/nbproject/private/
+/remote/firmware/nbproject/Makefile-local-default.mk
+/remote/firmware/nbproject/Makefile-genesis.properties
+/remote/firmware/build/
+/remote/firmware/dist/

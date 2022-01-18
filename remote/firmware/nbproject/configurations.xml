@@ -5,10 +5,13 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="drivers" displayName="drivers" projectFiles="true">
+        <itemPath>drivers/lora.c</itemPath>
+        <itemPath>drivers/spi.c</itemPath>
+        <itemPath>drivers/uart.c</itemPath>
       </logicalFolder>
       <logicalFolder name="include" displayName="include" projectFiles="true">
+        <itemPath>include/devcfg.h</itemPath>
       </logicalFolder>
-      <itemPath>include/devcfg.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -177,7 +180,7 @@
         <property key="default-char-type" value="true"/>
         <property key="define-macros" value=""/>
         <property key="disable-optimizations" value="true"/>
-        <property key="extra-include-directories" value="include;drivers"/>
+        <property key="extra-include-directories" value="drivers;include"/>
         <property key="favor-optimization-for" value="-speed,+space"/>
         <property key="garbage-collect-data" value="true"/>
         <property key="garbage-collect-functions" value="true"/>
@@ -202,6 +205,7 @@
         <property key="verbose" value="false"/>
         <property key="warning-level" value="-3"/>
         <property key="what-to-do" value="ignore"/>
+        <appendMe value="-I &quot;/drivers&quot;"/>
       </HI-TECH-COMP>
       <HI-TECH-LINK>
         <property key="additional-options-checksum" value=""/>
