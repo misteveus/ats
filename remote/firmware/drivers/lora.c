@@ -2,5 +2,4 @@
 
 void lora_init(void) {
     
-    
 }
