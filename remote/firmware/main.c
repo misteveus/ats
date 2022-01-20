@@ -2,6 +2,7 @@
 
 #include <xc.h>
 
+#include <interrupts.h>
 #include <spi.h>
 #include <uart.h>
 #include <lora.h>
