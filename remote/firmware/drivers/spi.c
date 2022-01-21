@@ -45,6 +45,10 @@ void spi1_init(void) {
     SPI1CON0bits.EN = 1;
 }
 
+// send_buff and recv_buff should both be not-null and have a size 
+// the same size sz (how much data to send). Be aware that every byte 
+// of data sent will read the response into the receive buffer whether 
+// a response is expected or not.
 void spi1_send(uint8_t *send_buff, uint8_t recv_buff, size_t sz)
 {
     if (send_buff == NULL || recv_buff == NULL || sz < 1)
@@ -52,8 +56,29 @@ void spi1_send(uint8_t *send_buff, uint8_t recv_buff, size_t sz)
         return;
     }
     
+    size_t buff_idx = 0;
     while (sz < 0) 
     {
-        // TODO: send data and place received data into recv buffer
+        if (SPI1CON2bits.BUSY)
+        {
+            continue;
+        }
+        else
+        {
+            // send next byte
+            SPI1TXB = send_buff[buff_idx];
+            
+            // add sync delay before reading BUSY flag (up to 2 cycles)
+            _asm("NOP");
+            _asm("NOP");
+            
+            // wait until done sending
+            while(SPI1CON2bits.BUSY) { };
+            
+            // read received byte
+            recv_buff[buff_idx] = SPI1RXB;
+            
+            sz--;
+        }
     }
 }
