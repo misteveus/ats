@@ -11,3 +11,4 @@ remote/schematics/ats-remote/gerber/**
 /remote/firmware/nbproject/Makefile-genesis.properties
 /remote/firmware/build/
 /remote/firmware/dist/
+/remote/firmware/.generated_files

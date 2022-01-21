@@ -21,5 +21,8 @@ int main(void)
 
 void init(void)
 {
+    interrupts_init();
+    spi1_init();
+    uart_init();
     lora_init();
 }

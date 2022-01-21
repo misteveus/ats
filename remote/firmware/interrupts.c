@@ -9,23 +9,23 @@ void interrupts_init() {
     // Disable interrupts
     INTCON0bits.GIE = 0;
     
-    // Enable high priority interrupts
-    INTCON0bits.GIEH = 1; 
-    
-    // Enable low priority interrupts
-    INTCON0bits.GIEL = 1; 
-    
-    // Enable interrupt priority
+    // Enable interrupt priorities
     INTCON0bits.IPEN = 1; 
 
     // Enable interrupt INT0 on its default port: RA2
     PIE1bits.INT0IE = 1;
     
+    // Set interrupt on rising edge (default)
+    INTCON0bits.INT0EDG = 1;
+    
     // Set interrupt INT0 to low priority
     IPR1bits.INT0IP = 0;
 
-    // Enable interrupts
-    INTCON0bits.GIE = 1;
+    // Enable high priority interrupts
+    INTCON0bits.GIEH = 1; 
+    
+    // Enable low priority interrupts
+    INTCON0bits.GIEL = 1; 
 }
 
 // This interrupt is activated by a rising edge on port RA2
