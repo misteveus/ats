@@ -674,17 +674,6 @@ F 3 "" H 3850 2050 50  0001 C CNN
 	1    3850 2050
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:LED_Small D3
-U 1 1 61F1DC27
-P 4250 1850
-F 0 "D3" H 4250 2089 50  0000 C CNN
-F 1 "LED_PPS" H 4250 1996 50  0000 C CNN
-F 2 "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4250 1850 50  0001 C CNN
-F 3 "~" V 4250 1850 50  0001 C CNN
-	1    4250 1850
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3850 1850 3850 2050
 $Comp
@@ -726,12 +715,6 @@ F 3 "~" H 4950 900 50  0001 C CNN
 	1    4950 900 
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	5150 900  5150 1650
-Wire Wire Line
-	4850 1350 4350 1350
-Wire Wire Line
-	4850 900  4350 900 
 $Comp
 L power:GND #PWR0120
 U 1 1 61F19544
@@ -778,12 +761,6 @@ F 3 "~" H 4350 1000 50  0001 C CNN
 	1    4350 1000
 	1    0    0    -1  
 $EndComp
-Connection ~ 4350 900 
-Wire Wire Line
-	4350 900  4250 900 
-Connection ~ 4350 1350
-Wire Wire Line
-	4350 1350 4250 1350
 $Comp
 L ats-remote:YIC71009EBGG U3
 U 1 1 61C5EB6A
@@ -1003,8 +980,6 @@ Text GLabel 1150 7000 2    50   Input ~ 0
 YIC_TXD
 Text GLabel 1150 6900 2    50   Input ~ 0
 YIC_RXD
-Wire Wire Line
-	4150 1850 4600 1850
 $Comp
 L Device:C_Small C14
 U 1 1 61CC5279
@@ -1109,4 +1084,6 @@ Wire Wire Line
 Wire Wire Line
 	8500 2550 8500 2700
 Connection ~ 8500 2550
+Wire Wire Line
+	4150 1850 4600 1850
 $EndSCHEMATC

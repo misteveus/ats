@@ -6,25 +6,24 @@
 // The interrupt vector table default base address is 0x00008 
 // and not changed 
 void interrupts_init() {
-    // Disable interrupts
+    // INTCON0
+    //   GIE/GIEH: Enable(1)/Disable(0) all interrupts
+    //   GIEL: Enable(1)/Disable(0) low priority interrupts
+    //   IPEN: Enable(1)/Disable(1) interrupt priorities
+    //   INT0EDG: Rising(1)/Falling(0) edge triggered
     INTCON0bits.GIE = 0;
-    
-    // Enable interrupt priorities
     INTCON0bits.IPEN = 1; 
-
-    // Enable interrupt INT0 on its default port: RA2
-    PIE1bits.INT0IE = 1;
-    
-    // Set interrupt on rising edge (default)
     INTCON0bits.INT0EDG = 1;
     
-    // Set interrupt INT0 to low priority
+    // PIE1
+    //   INT0IE: Enable(1)/Disable(0) INT0 interrupt
+    PIE1bits.INT0IE = 1;
+ 
+    // IPR1 
+    //   INT0IP: High(1)/Low(0) priority
     IPR1bits.INT0IP = 0;
 
-    // Enable high priority interrupts
     INTCON0bits.GIEH = 1; 
-    
-    // Enable low priority interrupts
     INTCON0bits.GIEL = 1; 
 }
 
@@ -32,7 +31,21 @@ void interrupts_init() {
 // which purpose is to indicate the lora module has received 
 // the correct preamble for a message.
 void ISR_int0(void) {
-    _asm("NOP");
+    __asm("NOP");
+}
+
+// Toggles the status led
+void ISR_tmr0(void) {
+    static uint8_t count = 0;
+    
+    // Clear interrupt flag
+    PIR3bits.TMR0IF = 0;
+    
+    // turn on led every 1/32 ticks for 1 tick of the counter
+    if (count++ % 0x20)
+        LATA &= ~_LATA_LATA4_MASK;
+    else
+        LATA |= _LATA_LATA4_MASK;
 }
 
 void ISR_default(void) {
