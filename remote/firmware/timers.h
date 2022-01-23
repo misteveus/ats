@@ -4,7 +4,6 @@
 
 #include <xc.h> 
 
-
+void tmr0_init(void);
 
 #endif	/* TIMERS_H */
-
