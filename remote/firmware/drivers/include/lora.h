@@ -5,68 +5,68 @@
 
 #include <spi.h>
 
-typedef uint8_t LoraRegAddr_t;
-typedef uint8_t LoraRegOp_t;
+typedef enum LoraRegAddr {
+    LORA_REG_FIFO                = (uint8_t) 0x00,
+    LORA_REG_OP_MODE             = (uint8_t) 0x01,
+    LORA_REG_FRF_MSB             = (uint8_t) 0x06,
+    LORA_REG_FRF_MID             = (uint8_t) 0x07,
+    LORA_REG_FRF_LSB             = (uint8_t) 0x08,
+    LORA_REG_PA_CONFIG           = (uint8_t) 0x09,
+    LORA_REG_PA_RAMP             = (uint8_t) 0x0A,
+    LORA_REG_OCP                 = (uint8_t) 0x0B,
+    LORA_REG_LNA                 = (uint8_t) 0x0C,
+    LORA_REG_FIFO_ADDR_PTR       = (uint8_t) 0x0D,
+    LORA_REG_FIFO_TX_BASE_ADDR   = (uint8_t) 0x0E,
+    LORA_REG_FIFO_RX_BASE_ADDR   = (uint8_t) 0x0F,
+            
+    LORA_REG_FIFO_RX_CURRENT_ADDR = (uint8_t) 0x10,
+    LORA_REG_IRQ_FLAGS_MASK      = (uint8_t) 0x11,
+    LORA_REG_IRQ_FLAGS           = (uint8_t) 0x12,
+    LORA_REG_RX_NB_BYTES         = (uint8_t) 0x13,
+    LORA_REG_RX_HEADER_CNT_VALUE_MSB = (uint8_t) 0x14,
+    LORA_REG_RX_HEADER_CNT_VALUE_LSB = (uint8_t) 0x15,
+    LORA_REG_RX_PKT_CNT_VALUE_MSB = (uint8_t) 0x16,
+    LORA_REG_RX_PKT_CNT_VALUE_LSB = (uint8_t) 0x17,
+    LORA_REG_MODEM_STAT          = (uint8_t) 0x18,
+    LORA_REG_PKT_SNR_VALUE       = (uint8_t) 0x19,
+    LORA_REG_PKT_RSSI_VALUE      = (uint8_t) 0x1A,
+    LORA_REG_RSSI_VALUE          = (uint8_t) 0x1B,
+    LORA_REG_HOP_CHANNEL         = (uint8_t) 0x1C,
+    LORA_REG_MODEM_CONFIG        = (uint8_t) 0x1D,
+    LORA_REG_MODEM_CONFIG_2      = (uint8_t) 0x1E,
+    LORA_REG_SYMB_TIMEOUT_LSB    = (uint8_t) 0x1F,
+    LORA_REG_PREAMBLE_MSB        = (uint8_t) 0x20,
+    LORA_REG_PREAMBLE_LSB        = (uint8_t) 0x21,
+    LORA_REG_PAYLOAD_LENGTH      = (uint8_t) 0x22,
+    LORA_REG_MAX_PAYLOAD_LENGTH  = (uint8_t) 0x23,
+    LORA_REG_HOP_PERIOD          = (uint8_t) 0x24,
+    LORA_REG_FIFORX_BYTE_ADDR    = (uint8_t) 0x25,
+    LORA_REG_MODEM_CONFIG_3      = (uint8_t) 0x26,
+            
+    LORA_REG_DIO_MAPPING_1       = (uint8_t) 0x40,
+    LORA_REG_DIO_MAPPING_2       = (uint8_t) 0x41,
+    LORA_REG_VERISON             = (uint8_t) 0x42,
+    LORA_REG_TCXO                = (uint8_t) 0x4B,
+    LORA_REG_PA_DAC              = (uint8_t) 0x4D,
+    LORA_REG_FORMER_TEMP         = (uint8_t) 0x5B,
+    LORA_REG_AGC_REF             = (uint8_t) 0x61,
+    LORA_REG_AGC_THRESH_1        = (uint8_t) 0x62,
+    LORA_REG_AGC_THRESH_2        = (uint8_t) 0x63,
+    LORA_REG_AGC_THRESH_3        = (uint8_t) 0x64,
+} LoraRegAddr_t;
 
-#define LORA_OP_READ                 (LoraRegOp_t) 0x00
-#define LORA_OP_WRITE                (LoraRegOp_t) 0x80
-
-#define LORA_REG_FIFO                (LoraRegAddr_t) 0x00
-
-// Common Registers
-#define LORA_REG_OP_MODE             (LoraRegAddr_t) 0x01
-#define LORA_REG_FRF_MSB             (LoraRegAddr_t) 0x06
-#define LORA_REG_FRF_MID             (LoraRegAddr_t) 0x07
-#define LORA_REG_FRF_LSB             (LoraRegAddr_t) 0x08
-
-// RF blocks
-#define LORA_REG_PA_CONFIG           (LoraRegAddr_t) 0x09
-#define LORA_REG_PA_RAMP             (LoraRegAddr_t) 0x0A
-#define LORA_REG_OCP                 (LoraRegAddr_t) 0x0B
-#define LORA_REG_LNA                 (LoraRegAddr_t) 0x0C
-
-// Page Registers
-#define LORA_REG_FIFO_ADDR_PTR       (LoraRegAddr_t) 0x0D
-#define LORA_REG_FIFO_TX_BASE_ADDR   (LoraRegAddr_t) 0x0E
-#define LORA_REG_FIFO_RX_BASE_ADDR   (LoraRegAddr_t) 0x0F
-#define LORA_REG_IRQ_FLAGS           (LoraRegAddr_t) 0x10
-#define LORA_REG_IRQ_FLAGS_MASK      (LoraRegAddr_t) 0x11
-#define LORA_REG_FREQ_IF_MSB         (LoraRegAddr_t) 0x12
-#define LORA_REG_FREQ_IF_LSB         (LoraRegAddr_t) 0x13
-#define LORA_REG_SYMB_TIMEOUT_MSB    (LoraRegAddr_t) 0x14
-#define LORA_REG_SYMB_TIMEOUT_LSB    (LoraRegAddr_t) 0x15
-#define LORA_REG_TX_CFG              (LoraRegAddr_t) 0x16
-#define LORA_REG_PAYLOAD_LENGTH      (LoraRegAddr_t) 0x17
-#define LORA_REG_PREAMBLE_MSB        (LoraRegAddr_t) 0x18
-#define LORA_REG_PREAMBLE_LSB        (LoraRegAddr_t) 0x19
-#define LORA_REG_MODULATION_CFG      (LoraRegAddr_t) 0x1A
-#define LORA_REG_RF_MODE             (LoraRegAddr_t) 0x1B
-#define LORA_REG_HOP_PERIOD          (LoraRegAddr_t) 0x1C
-#define LORA_REG_NB_RX_BYTES         (LoraRegAddr_t) 0x1D
-#define LORA_REG_RX_HEADER_INFO      (LoraRegAddr_t) 0x1E
-#define LORA_REG_RX_HEADER_CNT_VALUE (LoraRegAddr_t) 0x1F
-#define LORA_REG_RX_PACKET_CNT_VALUE (LoraRegAddr_t) 0x20
-#define LORA_REG_MODEM_STAT          (LoraRegAddr_t) 0x21
-#define LORA_REG_PKT_SNR_VALUE       (LoraRegAddr_t) 0x22
-#define LORA_REG_RSSI_VALUE          (LoraRegAddr_t) 0x23
-#define LORA_REG_PKT_RSSI_VALUE      (LoraRegAddr_t) 0x24
-#define LORA_REG_HOP_CHANNEL         (LoraRegAddr_t) 0x25
-#define LORA_REG_RX_DATA_ADDR        (LoraRegAddr_t) 0x26
-#define LORA_REG_DIO_MAPPING_1       (LoraRegAddr_t) 0x40
-#define LORA_REG_DIO_MAPPING_2       (LoraRegAddr_t) 0x41
-#define LORA_REG_VERISON             (LoraRegAddr_t) 0x42
-#define LORA_REG_TCXO                (LoraRegAddr_t) 0x4B
-#define LORA_REG_PA_DAC              (LoraRegAddr_t) 0x4D
-#define LORA_REG_FORMER_TEMP         (LoraRegAddr_t) 0x5B
-#define LORA_REG_AGC_REF             (LoraRegAddr_t) 0x61
-#define LORA_REG_AGC_THRESH_1        (LoraRegAddr_t) 0x62
-#define LORA_REG_AGC_THRESH_2        (LoraRegAddr_t) 0x63
-#define LORA_REG_AGC_THRESH_3        (LoraRegAddr_t) 0x64
-
+typedef enum LoraRegIoOp {
+    LORA_OP_READ  = (uint8_t) 0x00,
+    LORA_OP_WRITE = (uint8_t) 0x80,
+} LoraRegOp_t;
 
 void lora_init(void);
-uint8_t read_lora_reg(LoraRegAddr_t reg, size_t count);
-void write_lora_reg(LoraRegAddr_t reg, uint8_t *values, size_t count);
-
+uint8_t lora_reg_read(const LoraRegAddr_t reg);
+void lora_reg_write(const LoraRegAddr_t reg, const uint8_t value);
+void lora_mode_sleep(void);
+void lora_mode_standby(void);
+void lora_mode_transmit(void);
+void lora_mode_rxcontinuous(void);
+void lora_mode_rxsingle(void);
+void lora_mode_cad(void);
 #endif	/* LORA_H */
-

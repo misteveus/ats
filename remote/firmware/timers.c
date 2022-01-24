@@ -6,8 +6,6 @@ void tmr0_init(void) {
     //   EN: Enable(1)/Disable(0) timer 0
     //   MD16: Enable(1)/Disable(0) 16-bit mode
     //   OUTPS: Post-scaler ratio
-
-
     T0CON0bits.EN = 0;
     T0CON0bits.MD16 = 0;
     T0CON0bits.OUTPS = 0xf;
@@ -32,6 +30,12 @@ void tmr0_init(void) {
     // PIE3
     //   TMR0IE: Enable(1)/Disable(0) interrupt
     PIE3bits.TMR0IE = 1;
+
+    // TRISx: Set PORTx to input (1) or (0) output
+    TRISA &= ~_TRISA_TRISA4_MASK;
+
+    // ANSELx: Set PORTx to analog (1) or digital (0)
+    ANSELA &= ~_ANSELA_ANSELA4_MASK;
 
     T0CON0bits.EN = 1;
 }
