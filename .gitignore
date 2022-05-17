@@ -12,3 +12,4 @@ remote/schematics/ats-remote/gerber/**
 /remote/firmware/build/
 /remote/firmware/dist/
 /remote/firmware/.generated_files
+/remote/firmware/debug/

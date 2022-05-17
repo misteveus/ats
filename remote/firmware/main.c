@@ -60,6 +60,8 @@ void receiver(void) {
 
         // read message from rx buffer if rxdone
         if (reg & 0x40) {
+            reg = lora_reg_read(LORA_REG_FIFO_RX_CURRENT_ADDR);
+            lora_reg_write(LORA_REG_FIFO_ADDR_PTR, reg);
             reg = lora_reg_read(LORA_REG_FIFO);
             if (reg == LED_ON)
                 LATA &= ~_LATA_LATA4_MASK;
@@ -72,40 +74,55 @@ void receiver(void) {
     }
 }
 
+const uint8_t msg[] = {"Hello World"};
+
 void transmitter(void) {
-    uint8_t led_on = 0;
-    uint8_t reg;
 
     while (1) {
-        // reset tx message pointer to head
-        uint8_t fifo_base_addr = lora_reg_read(LORA_REG_FIFO_TX_BASE_ADDR);
+        for (size_t i = 0; i < 2500; i++);
+        uart_write(GPS_CMD_ENABLE_ALL, sizeof (GPS_CMD_ENABLE_ALL));
 
-        // set spi fifo addr to tx base addr
-        lora_reg_write(LORA_REG_FIFO_ADDR_PTR, fifo_base_addr);
+        for (size_t i = 0; i < 2500; i++);
+        uart_write(GPS_CMD_SLEEP, sizeof (GPS_CMD_SLEEP));
 
-        // place message in tx buffer
-        if (led_on) {
-            lora_reg_write(LORA_REG_FIFO, LED_OFF);
-            led_on = 0;
-        } else {
-            lora_reg_write(LORA_REG_FIFO, LED_ON);
-            led_on = 1;
-        }
-
-        // enter tx mode to send
-        lora_mode_transmit();
-
-        // poll for txdone
-        do {
-            reg = lora_reg_read(LORA_REG_IRQ_FLAGS);
-        } while (!(reg & ~0x04));
-
-        // clear txdone irq
-        lora_reg_write(LORA_REG_IRQ_FLAGS, 0x04);
-
-        // wait for some time
-        for (int i = 0; i < 1000; i++) {
-
-        }
+        for (size_t i = 0; i < 2500; i++);
+        uart_write(GPS_CMD_RESET, sizeof (GPS_CMD_RESET));
     }
+
+    /*
+   uint8_t led_on = 0;
+   uint8_t reg;
+
+   while (1) {
+       // reset tx message pointer to head
+       uint8_t fifo_base_addr = lora_reg_read(LORA_REG_FIFO_TX_BASE_ADDR);
+
+       // set spi fifo addr to tx base addr
+       lora_reg_write(LORA_REG_FIFO_ADDR_PTR, fifo_base_addr);
+
+       // place message in tx buffer
+       if (led_on) {
+           lora_reg_write(LORA_REG_FIFO, LED_OFF);
+           led_on = 0;
+       } else {
+           lora_reg_write(LORA_REG_FIFO, LED_ON);
+           led_on = 1;
+       }
+
+       // enter tx mode to send
+       lora_mode_transmit();
+
+       reg = lora_reg_read(LORA_REG_IRQ_FLAGS);
+       reg = lora_reg_read(LORA_REG_OP_MODE);
+
+       // poll for txdone
+       do {
+           reg = lora_reg_read(LORA_REG_IRQ_FLAGS);
+       } while ((reg & 0x08) == 0);
+
+       // clear txdone irq
+       lora_reg_write(LORA_REG_IRQ_FLAGS, 0x08);
+
+     */
 }
+

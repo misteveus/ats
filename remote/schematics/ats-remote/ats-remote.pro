@@ -1,4 +1,4 @@
-update=12/27/2021 7:42:56 AM
+update=5/9/2022 10:25:07 PM
 version=1
 last_client=kicad
 [general]
@@ -268,7 +268,7 @@ dPairViaGap=0.25
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=../../../../../../OneDrive/OIT/Spring 2022/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew

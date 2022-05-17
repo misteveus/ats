@@ -16,8 +16,8 @@ void lora_init(void) {
 
     // set radio frequency to 915.5MHz = 32MHz * 0xe4d000 / 2^19
     lora_reg_write(LORA_REG_FRF_MSB, 0xe4);
-    lora_reg_write(LORA_REG_FRF_MSB, 0xd0);
-    lora_reg_write(LORA_REG_FRF_MSB, 0x00);
+    lora_reg_write(LORA_REG_FRF_MID, 0xd0);
+    lora_reg_write(LORA_REG_FRF_LSB, 0x00);
 
     lora_mode_standby();
 }
@@ -55,7 +55,8 @@ void lora_mode_standby(void) {
     uint8_t op_mode;
 
     op_mode = lora_reg_read(LORA_REG_OP_MODE);
-    op_mode &= 0xf9;
+    op_mode &= 0xf8;
+    op_mode |= 0x01;
 
     lora_reg_write(LORA_REG_OP_MODE, op_mode);
 }
@@ -64,7 +65,8 @@ void lora_mode_transmit(void) {
     uint8_t op_mode;
 
     op_mode = lora_reg_read(LORA_REG_OP_MODE);
-    op_mode &= 0xfb;
+    op_mode &= 0xf8;
+    op_mode |= 0x03;
 
     lora_reg_write(LORA_REG_OP_MODE, op_mode);
 }
@@ -73,7 +75,8 @@ void lora_mode_rxcontinuous(void) {
     uint8_t op_mode;
 
     op_mode = lora_reg_read(LORA_REG_OP_MODE);
-    op_mode &= 0xfd;
+    op_mode &= 0xf8;
+    op_mode |= 0x05;
 
     lora_reg_write(LORA_REG_OP_MODE, op_mode);
 }
@@ -82,7 +85,8 @@ void lora_mode_rxsingle(void) {
     uint8_t op_mode;
 
     op_mode = lora_reg_read(LORA_REG_OP_MODE);
-    op_mode &= 0xfe;
+    op_mode &= 0xf8;
+    op_mode |= 0x06;
 
     lora_reg_write(LORA_REG_OP_MODE, op_mode);
 }
@@ -91,7 +95,8 @@ void lora_mode_cad(void) {
     uint8_t op_mode;
 
     op_mode = lora_reg_read(LORA_REG_OP_MODE);
-    op_mode &= 0xff;
+    op_mode &= 0xf8;
+    op_mode |= 0x07;
 
     lora_reg_write(LORA_REG_OP_MODE, op_mode);
 }
